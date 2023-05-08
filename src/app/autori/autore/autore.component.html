@@ -1,0 +1,17 @@
+<div class="container">
+  <p>Nome: {{autore.nome}}</p>
+  <p>Materia: {{autore.materia}}</p>
+  <button (click)="onCancellaByID(autore.id)">Calcella utente</button>
+</div>
+
+<div *ngIf="autori.length == autore.id" class="container">
+
+  <h3>Stampa autori in base alla loro materia di appartenenza</h3>
+  <button (click)="onStampaByMateria('Angular')">Angular</button>
+  <button (click)="onStampaByMateria('Java')">Java</button>
+
+  <div *ngFor="let autoreFiltrato of autoriFiltrati" class="container1">
+    <p>Nome: {{autoreFiltrato.nome}}</p>
+    <p>Materia: {{autoreFiltrato.materia}}</p>
+  </div>
+</div>

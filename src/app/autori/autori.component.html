@@ -1,0 +1,13 @@
+<div class="mb-3">
+  <label for="" class="form-label">Nome</label>
+  <input type="email" class="form-control" placeholder="Inserisci il nome" [(ngModel)]="nome">
+</div>
+<div class="mb-3">
+  <label for="" class="form-label">Materia</label>
+  <input type="email" class="form-control" placeholder="Inserisci la materia" [(ngModel)]="materia">
+</div>
+<button type="button" (click)="onAggiungiAutore()">Aggiungi autore</button>
+
+
+<app-autore [autore]="autore" *ngFor="let autore of autori"></app-autore>
+
